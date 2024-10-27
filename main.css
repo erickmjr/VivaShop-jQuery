@@ -7,7 +7,8 @@
     --cor-destaque: #0056D2;
     --cor-de-fundo: #D9D9D9;
     --cor-texto-importante: #fff;
-    --cor-texto: #000;
+    --cor-texto: #333333;
+    --cor-section: #969292;
     --fonte: "Reem Kufi", sans-serif;
 }
 
@@ -22,18 +23,25 @@ body{
     width: 100vw;
     background-color: var(--cor-de-fundo);
     font-family: var(--fonte);
+    overflow-x: hidden;
+}
+
+h2, p{
+    color: var(--cor-texto);
 }
 
 header #container-header{
-    font-size: 3.5vw;
-    color: var(--cor-texto-importante);
     background-color: var(--cor-destaque);
-    width: 100%;
     padding: 3vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     max-height: 15vh;
+}
+
+#container-header h1{
+    font-size: 3vw;
+    color: var(--cor-texto-importante);
 }
 
 header ul{
@@ -47,7 +55,7 @@ header ul{
 }
 
 .menu-hamburguer span{
-    height: 0.25rem;
+    height: 0.3vw;
     width: 100%;
     background-color: var(--cor-de-fundo);
     display: block;
@@ -75,4 +83,63 @@ nav ul a{
     cursor: pointer;
     text-decoration: none;
     color: var(--cor-de-fundo);
+}
+
+section{
+    max-width: 100vw;
+    margin: 1vw;
+}
+
+#bombando {
+    text-align: center;
+    width: 100%;
+}
+
+#carousel-images {
+    padding: 2vw;
+    max-width: 100%;
+    text-align: center;
+    background-color: var(--cor-section);
+    border-radius: 8px;
+}
+
+#carousel-images img {
+    height: 30vh;
+    border-radius: 8px;
+    box-shadow: 10px 1px 10px 1px rgba(0, 0, 0, 0.224);
+}
+
+#carousel-images .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1366px) {
+    #container-header h1{
+        font-size: 3vw;
+    }
+
+    #carousel-images img {
+        height: 20vh;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    #container-header h1{
+        font-size: 5vw;
+    }
+
+    .menu-hamburguer span{
+        height: 0.2rem;
+        
+    }
+
+    nav{
+        max-height: 10vh;
+        font-size: 3vw;
+    }
 }
